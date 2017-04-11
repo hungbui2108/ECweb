@@ -23,9 +23,12 @@
 		{
 			$this->model->load('product');
 			$this->library->load('upload');
+			$this->library->load('date');
 			$content ='';
 			$temp = $this->model->product->get_select_product($id);
+			$date = "'".$date."'";
 			$image_link = '';
+
 			$name = "'".$_POST['name']."'";
 			$price = $_POST['price'];
 			$sold_qty = $_POST['sold_qty'];
@@ -47,10 +50,11 @@
 			}
 			else{$image_link = "'".$temp['image_link']."'";}
 			$data = array('name'=>$name,'price'=>$price,'sold_qty'=>$sold_qty,
-				'content'=>$content,'image_link'=>$image_link);
+				'content'=>$content,'image_link'=>$image_link,'modify_time'=>$date);
 			if ($do = $this->model->product->update_product($data,$id)) {
 				header('Location:admin.php?c=product_list');
 			}
 			header('Location:admin.php?c=product_update&&d='.$id);
 	}
+}
  ?>

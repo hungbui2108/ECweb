@@ -26,6 +26,14 @@
 			//load model
 			require_once PATH_SYSTEM.'core/Model_Loader.php';
 			$this->model = new Model_Loader();
+			//load header
+			$this->view->load('header');
+		}
+
+		public function __destruct()
+		{
+			//load footer
+			$this->view->load('footer');
 		}
 		
 	}

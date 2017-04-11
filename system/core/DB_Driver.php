@@ -75,6 +75,16 @@
 			$sql = 'SELECT * FROM '.$table.' WHERE '.$where;
 			$result = mysqli_query($this->__conn,$sql);
 			$data = array();
+			 while($row=mysqli_fetch_assoc($result)){
+			 	$data[]= $row;
+			 }
+			 return $data;
+		}
+		public function get_one($table,$where)
+		{
+			$sql = 'SELECT * FROM '.$table.' WHERE '.$where;
+			$result = mysqli_query($this->__conn,$sql);
+			$data = array();
 			if($row=mysqli_fetch_assoc($result)){
 			 	$data= $row;
 			 	return $data;

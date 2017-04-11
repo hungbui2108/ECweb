@@ -1,4 +1,3 @@
-<?php require_once 'Header_View.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,4 +26,3 @@
 </div>
 </body>
 </html>
-<?php require_once 'Footer_View.php'; ?>

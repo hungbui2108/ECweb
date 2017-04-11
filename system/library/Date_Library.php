@@ -12,7 +12,7 @@
 		public function get_date()
 		{
 			date_default_timezone_set('Asia/Ho_Chi_Minh');
-			$data = date('Y/m/d');
+			$data = date('Y-m-d');
 			return $data;
 		}
 	}

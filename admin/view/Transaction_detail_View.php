@@ -9,18 +9,20 @@
     <div class="row col-md-12">
     <table class="table table-striped custab">
     <thead>
-    <a href="admin.php?c=brand_add" class="btn btn-primary btn-xs pull-right"><b>+</b>Thêm mới</a>
+    <p class="pull-right">Đơn hàng số <?php echo $id; ?></p>
         <tr>
             <th>ID</th>
-            <th>ID loại</th>
-            <th>tên hãng</th>
+            <th>Sản phẩm</th>
+            <th>Số Lượng</th>
+            <th>Tổng tiền</th>
         </tr>
     </thead>
     	<?php foreach ($data as $key => $value) {?>
             <tr>
                 <td><?php echo $value['id']; ?></td>
-                <td><?php echo $value['catalog_id']; ?></td>
-                <td><?php echo $value['name']; ?></td>
+                <td><?php echo $value['product_name']; ?></td>
+                <td><?php echo $value['qty']; ?></td>
+                <td><?php echo $value['amount']; ?></td>
             </tr>
             <?php } ?>
     </table>

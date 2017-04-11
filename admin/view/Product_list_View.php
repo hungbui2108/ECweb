@@ -1,4 +1,3 @@
-<?php require_once 'Header_View.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +25,7 @@
                 <td><?php echo $value['price'].' VNĐ'; ?></td>
                 <td><?php echo $value['sold_qty']; ?></td>
                 <td class="text-center">
-                    <a class='btn btn-info btn-xs' href="admin.php?c=product_update&&d=<?php echo $value['id']; ?>">
+                    <a class='btn btn-success btn-xs' href="admin.php?c=product_update&&d=<?php echo $value['id']; ?>">
                         <span class="glyphicon glyphicon-edit"></span> Edit
                     </a> 
                     <a href="admin.php?c=product_delete&&d=<?php echo $value['id']; ?>" class="btn btn-danger btn-xs">
@@ -40,4 +39,3 @@
 </div>
 </body>
 </html>
-<?php require_once 'Footer_View.php'; ?>

@@ -32,12 +32,14 @@
 				$this->model->load('product');
 				$this->library->load('upload');
 				$this->model->load('brand');
+				$this->library->load('date');
 					$name = $_POST['name'];
 					$price = $_POST['price'];
 					$catalog = $_POST['catalog'];
 					$content = $_POST['content'];
 					$brand = array('catalog_id' => $catalog, 'brand_name' => $_POST['brand']);
 					$brand_select = $this->model->brand->get_select_brand($brand);
+					$date = $this->library->date->get_date();
 					$path = 'upload/image/';
 					//thông ti upload
 					$upload = array('name' => $_FILES['file']['name'],
@@ -47,7 +49,7 @@
 						'path' => $path
 					 );
 				$data = array('catalog_id'=>$catalog, 'brand_id'=>$brand_select['id'],'name'=>$name, 'price'=>$price,
-					'image_link'=>$path.$upload['name'],'content'=>$content);
+					'image_link'=>$path.$upload['name'],'content'=>$content,'modify_time'=>$date);
 				if ($done1 = $this->model->product->add_product($data) 
 					&& $done2 = $this->library->upload->upload($upload)) {
 					header('Location:admin.php?c=product_add');

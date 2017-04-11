@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>Trang quản trị</title>
 
     <!-- Bootstrap -->
     <link href="public/css/bootstrap.min.css" rel="stylesheet">
@@ -24,7 +24,7 @@
       <a class="navbar-brand" href="admin.php?c=home">Quản trị</a>
     </div>
     <ul class="nav navbar-nav">
-      <li <?php if($c=='home'){echo 'class="active"';}?>><a href="admin.php?c=home">Home</a></li>
+      <li <?php if($c=='home'){echo 'class="active"';}?>><a href="admin.php?c=home">Trang Chủ</a></li>
       <li <?php if($c=='user'){echo 'class="active"';}?>><a href="admin.php?c=user">Thành Viên</a></li> 
             <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Sản Phẩm
@@ -32,7 +32,7 @@
         <ul class="dropdown-menu">
           <li <?php if($c=='product_list'){echo 'class="active"';}?>><a href="admin.php?c=product_list">Danh sách sản phẩm</a></li>
           <li <?php if($c=='product_add'){echo 'class="active"';}?>><a href="admin.php?c=product_add">Thêm mới sản phẩm </a></li>
-          <li><a href="#">thống kê sản phẩm</a></li> 
+          <li><a href="#">Thống kê sản phẩm</a></li> 
         </ul>
       </li>
       <li class="dropdown">
@@ -43,7 +43,7 @@
           <li><a href="admin.php?c=brand_list">Hãng</a></li> 
         </ul>
       </li>
-      <li><a href="#">Đơn hàng</a></li>
+      <li><a href="admin.php?c=transaction_list">Đơn hàng</a></li>
       <li><a href="admin.php?c=logout">logout</a></li> 
     </ul>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

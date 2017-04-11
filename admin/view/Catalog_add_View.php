@@ -1,4 +1,3 @@
-<?php require_once 'Header_View.php'; ?>
     <div class="container">
         <div class="row col-md-12">
             <form action="admin.php?c=catalog_add&&a=add_catalog" method="POST" accept-charset="utf-8" enctype="multipart/form-data">
@@ -18,4 +17,3 @@
             </form>
         </div>
     </div>
-<?php require_once 'Footer_View.php'; ?>

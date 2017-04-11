@@ -17,7 +17,7 @@
 		public function get_select_product($where)
 		{
 			$where = 'id ="'.$where.'"';
-			$data = parent::get_select('product',$where);
+			$data = parent::get_one('product',$where);
 			return $data;
 		}
 		public function add_product($data)

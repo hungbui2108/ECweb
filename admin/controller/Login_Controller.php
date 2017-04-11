@@ -4,7 +4,17 @@
 	*/
 	class Login_Controller extends Controller
 	{
-		
+	function __construct($foo = null)
+		{
+			require_once PATH_SYSTEM.'core/Library_Loader.php';
+			$this->library = new Library_Loader();
+			//load view
+			require_once PATH_SYSTEM.'core/View_Loader.php';
+			$this->view = new View_Loader();
+			//load model
+			require_once PATH_SYSTEM.'core/Model_Loader.php';
+			$this->model = new Model_Loader();
+		}		
 		public function index()
 		{
 			# code...
@@ -19,13 +29,16 @@
 			$data = $this->model->admin->get_username($username);
 			if ($data) {
 				foreach ($data as $key => $value) {
-				if ($data['username'] == $username && $data['password'] == $password) {
+				if ($value['username'] == $username && $value['password'] == $password) {
 					$_SESSION['username'] = $username;
 					header('Location: admin.php?c=home');
+					}
 				}
 			}
 		}
-			// header('Location:admin.php?c=login');
+		public function __destruct()
+		{
+			# code...
 		}
 	}
 ?>
