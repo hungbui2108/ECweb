@@ -16,12 +16,6 @@
 		{
 			
 			$this->view->load('home');
-			// echo $_SERVER['HTTP_REFERER'];
-			// $this->model->load('admin');
-			
-			// print_r($this->model->admin->get_username());
-			// $this->library->load('upload');
-			// $this->library->upload->upload();
 		}
 	}
 ?>

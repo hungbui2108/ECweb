@@ -91,6 +91,16 @@
 			 }
 			return false;
 		}
+		public function get_order_desc($table,$order)
+		{
+			$sql = 'SELECT * FROM '.$table.' ORDER BY '.$order.' DESC';
+			$result = mysqli_query($this->__conn,$sql);
+			$data = array();
+			 while($row=mysqli_fetch_assoc($result)){
+			 	$data[]= $row;
+			 }
+			 return $data;
+		}
 
 	}
 ?>

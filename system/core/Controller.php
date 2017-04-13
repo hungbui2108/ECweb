@@ -27,7 +27,10 @@
 			require_once PATH_SYSTEM.'core/Model_Loader.php';
 			$this->model = new Model_Loader();
 			//load header
-			$this->view->load('header');
+			$this->model->load('catalog');
+			$data = $this->model->catalog->get_all_catalog();
+			$array = array('data'=>$data);
+			$this->view->load('header',$data);
 		}
 
 		public function __destruct()
