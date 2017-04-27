@@ -21,6 +21,12 @@
 			}
 			return false;
 		}
+		public function get_select_catalog($where)
+		{
+			$where = 'id ="'.$where.'"';
+			$data = parent::get_one('catalog',$where);
+			return $data;
+		}
 	}
 
  ?>

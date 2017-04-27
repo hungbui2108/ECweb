@@ -12,8 +12,9 @@
 				header('Location: admin.php?c=login');
 			}
 		}
-		public function index($id)
+		public function index()
 		{
+			$id = $_GET['id'];
 			$this->model->load('product');
 			if ($do = $this->model->product->delete_product($id)) {
 				header('Location:admin.php?c=product_list');

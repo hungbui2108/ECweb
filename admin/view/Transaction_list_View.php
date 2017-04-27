@@ -28,10 +28,10 @@
                 <td><?php echo $value['message']; ?></td>
                 <td><?php echo $value['created']; ?></td>
                 <td class="text-center">
-                    <a class='btn btn-info btn-xs' href="admin.php?c=transaction_detail&&d=<?php echo $value['id']; ?>">
+                    <a class='btn btn-info btn-xs' href="admin.php?c=transaction_detail&&id=<?php echo $value['id']; ?>">
                         <span class="glyphicon glyphicon-edit"></span> Detail
                     </a> 
-                    <a href="admin.php?c=transaction_done&&d=<?php echo $value['id']; ?>" class="btn btn-success btn-xs">
+                    <a href="admin.php?c=transaction_done&&id=<?php echo $value['id']; ?>" class="btn btn-success btn-xs">
                         <span class="glyphicon glyphicon-ok"></span> Done
                     </a>
                 </td>

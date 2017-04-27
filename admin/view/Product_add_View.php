@@ -9,6 +9,9 @@
                                 <div class="col-lg-12 col-md-12 col-sm-12" style="padding-bottom: 10px;">
                                     <input class="form-control" name="price" placeholder="Giá" type="text" required />
                                 </div>
+                                <div class="col-lg-4" style="padding-bottom: 10px;">
+                                    <input class="form-control" name="storage_qty" placeholder="Số lượng sản phẩm" type="text" required />
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-lg-2 " style="padding-bottom: 10px";>

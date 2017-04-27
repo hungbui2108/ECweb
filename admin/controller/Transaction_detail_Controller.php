@@ -12,8 +12,9 @@
 				header('Location: admin.php?c=login');
 			}
 		}
-		public function index($id)
+		public function index()
 		{
+			$id = $_GET['id'];
 			$this->model->load('trans_detail');
 			$this->model->load('product');
 			$data = $this->model->trans_detail->get_select_trans_detail($id);

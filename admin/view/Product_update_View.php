@@ -1,6 +1,6 @@
     <div class="container">
         <div class="row col-md-12">
-            <form action="admin.php?c=product_update&&a=update_product&&d=<?php echo $id; ?>" method="POST" accept-charset="utf-8" enctype="multipart/form-data">
+            <form action="admin.php?c=product_update&&a=update_product&&id=<?php echo $id; ?>" method="POST" accept-charset="utf-8" enctype="multipart/form-data">
                     <div class="modal-body" style="padding: 5px;">
                           <div class="row">
                                 <div class="col-lg-12 col-md-12 col-sm-12" style="padding-bottom: 10px;">
@@ -12,7 +12,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-12 col-md-12 col-sm-12" style="padding-bottom: 10px;">
-                                    <input class="form-control" value=<?php echo '"'.$sold_qty.'"'; ?> name="sold_qty" placeholder="Số lượng đã bán" type="text" required autofocus />
+                                    <input class="form-control" value=<?php echo '"'.$storage_qty.'"'; ?> name="storage_qty" placeholder="Số lượng trong kho" type="text" required autofocus />
                                 </div>
                             </div> 
                             <div class="row">

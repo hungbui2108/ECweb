@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Login</title>
+    </head>
+    <body >
 <div class="container">
     <div class="row vertical-offset-100">
         <div class="col-md-4 col-md-offset-4">
@@ -23,3 +29,6 @@
         </div>
     </div>
 </div>
+</body>
+</html>
+

@@ -23,13 +23,7 @@
 		if (!method_exists($controllerobj, $action)) {
 			die('methob khong ton tai');
 		}
-		if (isset($_GET['d'])) {
-			$data = $_GET['d'];
-			$controllerobj->{$action}($data);
-		}
-		else{
 			$controllerobj->{$action}();
-		}
 
 	}
 ?>

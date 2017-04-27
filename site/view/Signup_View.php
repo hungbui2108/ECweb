@@ -2,11 +2,7 @@
 <html lang="en">
     <head> 
     <link rel="stylesheet" type="text/css" href="public/css/signup.css">
-    <?php if ($data) {?>
-    	<script language="javascript">
-            alert("Đăng Ký Thất Bại");
-        </script>
-    <?php } ?>
+    <title>Sign Up</title>
 	</head>
 	<body>
 		<div class="container">
@@ -74,7 +70,13 @@
 						</div>
 						<div class="login-register">
 				            <a href="index.php?c=login">Login</a>
-				         </div>
+				        </div>
+				        <div>
+				        	<?php if($data){
+				        		echo '<p style="color: red;">signup fail</p>';
+				        	} 
+				        	?>
+				        </div>
 					</form>
 				</div>
 			</div>

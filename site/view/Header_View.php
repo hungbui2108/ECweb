@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Shop Homepage</title>
+    <!-- <title>Shop Homepage</title> -->
 
     <!-- Bootstrap Core CSS -->
     <link href="public/css/bootstrap.min.css" rel="stylesheet">
@@ -25,10 +25,10 @@
     <![endif]-->
 
 </head>
-<body>
+<body style="background-color: #f2f2f2">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" >
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -43,7 +43,7 @@
             <div>
             <?php if (!isset($_SESSION['user'])) {?>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.php?c=signup" ><span class="glyphicon glyphicon-user"></span> Đăng ký</a></li>
+                    <li><a href="index.php?c=signup"><span class="glyphicon glyphicon-user"></span> Đăng ký</a></li>
                     <li><a href="index.php?c=login"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
                 </ul>
@@ -66,7 +66,7 @@
                 <ul class="nav navbar-nav">
                     <?php foreach ($data as $key => $value){?>
                     <li>
-                        <a href="#"><?php echo $value['name']; ?></a>
+                        <a href="index.php?c=product_list_catalog&id=<?php echo $value['id']; ?>"><?php echo $value['name']; ?></a>
                     </li>
                     <?php } ?>
                 </ul>
