@@ -26,5 +26,16 @@
 			$data = parent::get_select('product',$where);
 			return $data;
 		}
+		public function get_list_by_brand($where)
+		{
+			$where = 'brand_id ="'.$where.'"';
+			$data = parent::get_select('product',$where);
+			return $data;
+		}
+		public function search_product($key)
+		{
+			$data = parent::search('product',$key);
+			return $data;
+		}
 	}
  ?>

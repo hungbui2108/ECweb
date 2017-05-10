@@ -9,7 +9,7 @@
           <ul class="nav navbar-nav navbar-left">
             <li><a><?php echo $catalog['name'].':  '; ?></a></li>
             <?php foreach ($brand as $key => $value): ?>
-                <li><a href="#"><?php echo $value['name']; ?></a></li>
+                <li><a href="index.php?c=product_list_brand&id=<?php echo $value['id']; ?>"><?php echo $value['name']; ?></a></li>
             <?php endforeach ?>
             </ul>
         </div><!-- /.navbar-collapse -->
@@ -23,7 +23,7 @@
                         <img style="width: 170px; height: 200px;" src="<?php echo $value['image_link']; ?>" alt="">
                     </a>
                     <div class="caption">
-                        <h4 class="pull-right"><?php echo $value['price'].' VNĐ'; ?></h4> <br> <br>
+                        <h4 class="pull-right"><?php echo number_format($value['price']).' VNĐ'; ?></h4> <br> <br>
                         <h4><a href="index.php?c=product_detail&id=<?php echo $value['id'] ?>"><?php echo $value['name']; ?></a></h4>
                     </div>
                 </div>

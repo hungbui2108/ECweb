@@ -23,7 +23,7 @@
             <tr>
                 <td><?php echo $value['id']; ?></td>
                 <td><?php echo $value['name']; ?></td>
-                <td><?php echo $value['price'].' VNĐ'; ?></td>
+                <td><?php echo number_format($value['price']).' VNĐ'; ?></td>
                 <td><?php echo $value['sold_qty']; ?></td>
                 <td><?php echo $value['storage_qty']; ?></td>
                 <td class="text-center">

@@ -17,7 +17,7 @@
 		public function get_select_brand($array)
 		{
 			$where = 'catalog_id ="'.$array['catalog_id'].'" AND name="'.$array['brand_name'].'"';
-			$data = parent::get_select('brand',$where);
+			$data = parent::get_one('brand',$where);
 			return $data;
 		}
 		public function add_brand($data)

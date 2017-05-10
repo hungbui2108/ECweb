@@ -22,7 +22,7 @@
                 <td><?php echo $value['id']; ?></td>
                 <td><?php echo $value['product_name']; ?></td>
                 <td><?php echo $value['qty']; ?></td>
-                <td><?php echo $value['amount']; ?></td>
+                <td><?php echo number_format($value['amount']).' VNĐ'; ?></td>
             </tr>
             <?php } ?>
     </table>

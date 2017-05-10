@@ -1,3 +1,10 @@
+ <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Thêm Sản Phẩm</title>
+        <script src="public/ckeditor/ckeditor.js"></script>
+    </head>
+    <body >
     <div class="container">
         <div class="row col-md-12">
             <form action="admin.php?c=product_add&&a=add_product" method="POST" accept-charset="utf-8" enctype="multipart/form-data">
@@ -33,7 +40,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-12 col-md-12 col-sm-12">
-                                    <textarea style="resize:vertical;" class="form-control" placeholder="Nội Dung" rows="6" name="content" required></textarea>
+                                    <textarea style="resize:vertical;" class="ckeditor" placeholder="Nội Dung" rows="6" name="content" required></textarea>
                                 </div>
                             </div>
                         </div>  
@@ -48,3 +55,5 @@
             </form>
         </div>
     </div>
+    </body>
+    </html>

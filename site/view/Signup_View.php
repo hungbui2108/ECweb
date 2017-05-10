@@ -72,8 +72,8 @@
 				            <a href="index.php?c=login">Login</a>
 				        </div>
 				        <div>
-				        	<?php if($data){
-				        		echo '<p style="color: red;">signup fail</p>';
+				        	<?php if(isset($signup)){
+				        		echo '<p style="color:red;">signup fail</p>';
 				        	} 
 				        	?>
 				        </div>

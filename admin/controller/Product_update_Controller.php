@@ -18,7 +18,7 @@
 			$this->model->load('product');
 			$data = $this->model->product->get_select_product($id);
 			$array = array('name' => $data['name'],'price'=>$data['price'],'sold_qty'=>$data['sold_qty'],
-				'storage_qty'=>$data['storage_qty'],'id'=>$id );
+				'storage_qty'=>$data['storage_qty'],'id'=>$id,'content'=>$data['content'] );
 			$this->view->load('product_update',$array);
 		}
 		public function update_product()

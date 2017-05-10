@@ -15,5 +15,11 @@
 			$data = parent::get_select('brand',$where);
 			return $data;
 		}
+		public function get_select_brand($where)
+		{
+			$where = 'id ="'.$where.'"';
+			$data = parent::get_one('brand',$where);
+			return $data;
+		}
 	}
  ?>

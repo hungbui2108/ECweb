@@ -14,7 +14,6 @@
             <th>Email</th>
             <th>SĐT</th>
             <th>Tổng Tiền</th>
-            <th>Thông Điệp</th>
             <th>Thời gian đặt hàng</th>
             <th class="text-center">Action</th>
         </tr>
@@ -24,8 +23,7 @@
                 <td><?php echo $value['id']; ?></td>
                 <td><?php echo $value['user_email']; ?></td>
                 <td><?php echo $value['user_phone'].' VNĐ'; ?></td>
-                <td><?php echo $value['amount']; ?></td>
-                <td><?php echo $value['message']; ?></td>
+                <td><?php echo number_format($value['amount']).' VNĐ'; ?></td>
                 <td><?php echo $value['created']; ?></td>
                 <td class="text-center">
                     <a class='btn btn-info btn-xs' href="admin.php?c=transaction_detail&&id=<?php echo $value['id']; ?>">

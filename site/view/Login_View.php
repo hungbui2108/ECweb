@@ -22,6 +22,9 @@
                         </div>
                         <input class="btn btn-lg btn-primary btn-block" type="submit" value="Đăng nhập">
                         <a href="">đăng ký tài khoản</a>
+                        <?php if (isset($login)) {
+                            echo "<p style=\"color:red;\">LOGIN FAIL</p>";
+                        } ?>
                     </fieldset>
                     </form>
                 </div>

@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <!-- <title>Shop Homepage</title> -->
 
@@ -33,9 +34,9 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <a class="navbar-brand" href="index.php?c=home">Trang Chủ</a>
-                <form class="navbar-form navbar-right" role="search">
+                <form class="navbar-form navbar-right" action="index.php?c=search" method="post">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search" />
+                        <input type="text" name="search" class="form-control" placeholder="Search" />
                     </div>
                     <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                 </form>
@@ -45,7 +46,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="index.php?c=signup"><span class="glyphicon glyphicon-user"></span> Đăng ký</a></li>
                     <li><a href="index.php?c=login"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+                    <li><a href="index.php?c=shopping_cart"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
                 </ul>
             <?php } ?>
             <?php if(isset($_SESSION['user'])) {?>
@@ -57,7 +58,7 @@
                             <li><a href="index.php?c=logout">Log Out</a></li> 
                         </ul>
                     </li>
-                    <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+                    <li><a href="index.php?c=shopping_cart"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
                 </ul>
             <?php } ?>
             </div>  

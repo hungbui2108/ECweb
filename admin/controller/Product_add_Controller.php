@@ -42,7 +42,7 @@
 					$brand_select = $this->model->brand->get_select_brand($brand);
 					$date = $this->library->date->get_date();
 					$path = 'upload/image/';
-					//thông ti upload
+					// thông ti upload
 					$upload = array('name' => $_FILES['file']['name'],
 						'tmp_name' => $_FILES['file']['tmp_name'],
 						'type' => $_FILES['file']['type'],
@@ -57,5 +57,6 @@
 				}
 				else{header('Location:admin.php?c=product_add');}
 			}
+
 		}	
 ?>

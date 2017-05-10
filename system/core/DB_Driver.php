@@ -14,6 +14,13 @@
  
 	        // Xử lý truy vấn UTF8 để tránh lỗi font
     	    mysqli_query($this->__conn, "SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'");
+    	    mysqli_set_charset($this->__conn, 'utf8' );
+
+    	    // mysql_query("SET NAMES 'utf8';"); 
+    	    // mysql_query("SET CHARACTER SET 'utf8';"); 
+    	    // mysql_query("SET SESSION collation_connection = 'utf8_general_ci';"); 
+
+
 		}
 		function __destruct(){
 			if ($this->__conn) {
@@ -98,6 +105,16 @@
 			$data = array();
 			 while($row=mysqli_fetch_assoc($result)){
 			 	$data[]= $row;
+			 }
+			 return $data;
+		}
+		public function search($table,$key)
+		{
+			$sql = "SELECT * FROM ".$table." WHERE name like '%$key%'";
+			$search = mysqli_query($this->__conn,$sql);
+			$data = array();
+			while ($row=mysqli_fetch_assoc($search)) {
+			 	$data[] = $row;
 			 }
 			 return $data;
 		}

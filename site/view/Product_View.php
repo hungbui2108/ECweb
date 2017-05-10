@@ -14,9 +14,9 @@
 
                     <!-- Precios -->
                     <h6 class="title-price"><small>Giá</small></h6>
-                    <h3 style="margin-top:0px;"><?php echo $price; ?></h3>
+                    <h3 style="margin-top:0px;"><?php echo number_format($price).' VNĐ'; ?></h3>
 
-                    <form>
+                    <form method="post" action="index.php?c=shopping_cart&a=add_cart&id=<?php echo $id; ?>">
                         <div class="section" style="padding-bottom:20px;">
                             <h6 class="title-attr"><small>Số Lượng</small></h6>                    
                             <div>
@@ -26,6 +26,16 @@
 
                         <div class="section" style="padding-bottom:20px;">
                             <button class="btn btn-success" type="submit"><span style="margin-right:20px" class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Bỏ vào giỏ hàng </button>
+                            <?php if (isset($add)) {
+                                echo "<p style=\"color:red;\">Hết hàng, đặt hàng thất bại</p>";
+                            } ?>
+                            <?php if ($stqty==1) {
+                                echo "<p style=\"color:red;\">Hết Hàng</p>";
+                            } 
+                                else{
+                                   echo "<p style=\"color:green;\">Còn Hàng</p>"; 
+                                }
+                            ?>
                         </div>
                     </form>                                        
                 </div>                              

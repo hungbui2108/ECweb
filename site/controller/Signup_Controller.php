@@ -33,8 +33,7 @@
 		}
 		public function signup_fail()
 		{
-			$data = array('data' => 'login_fail');
-			$this->view->load('signup',$data);
+			$this->view->load('signup',$signup=array('signup'=>1));
 		}
 	}
 ?>
