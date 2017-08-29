@@ -27,7 +27,7 @@
                         <div class="section" style="padding-bottom:20px;">
                             <button class="btn btn-success" type="submit"><span style="margin-right:20px" class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Bỏ vào giỏ hàng </button>
                             <?php if (isset($add)) {
-                                echo "<p style=\"color:red;\">Hết hàng, đặt hàng thất bại</p>";
+                                echo "<p style=\"color:red;\">Số lượng trong kho không đủ, đặt hàng thất bại</p>";
                             } ?>
                             <?php if ($stqty==1) {
                                 echo "<p style=\"color:red;\">Hết Hàng</p>";

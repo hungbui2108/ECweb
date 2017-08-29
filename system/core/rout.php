@@ -24,6 +24,5 @@
 			die('methob khong ton tai');
 		}
 			$controllerobj->{$action}();
-
 	}
 ?>
